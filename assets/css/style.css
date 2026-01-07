@@ -84,7 +84,7 @@ h3 {
 .breathing-circle {
     width: 150px;
     height: 150px;
-    background: rgba(100, 142, 123, 0.2); /* Using your --sage-green */
+    background: rgba(100, 142, 123, 0.2); /* Using --sage-green */
     border: 2px solid var(--sage-green);
     border-radius: 50%;
     margin: 3rem auto;
@@ -120,39 +120,57 @@ h3 {
     color: white;
 }
 
-/* --- Insights Section Styles --- */
+/* --- Wellness Insights Section --- */
 
 #insights {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #ffffff; /* Clean white background for readability */
+    background-color: #ffffff;
 }
 
-/* Style the cards using Sage Green and Soft Stone */
+/* 1. The Card Container */
 #insights .card {
     background-color: var(--soft-stone);
     border: none;
     border-radius: 25px;
-    transition: box-shadow 0.3s ease; /* A simple shadow change on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* A subtle effect when the mouse touches the card */
+/* 2. Hover Effect: Makes the card 'lift' slightly */
 #insights .card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* Specific styling for the titles inside the cards */
-#insights h3 {
-    color: var(--sage-green);
-    font-weight: 700;
-    margin-bottom: 15px;
+/* 3. The Custom Badge (Long-hand version) */
+.badge.bg-success.bg-opacity-10 {
+    background-color: rgba(100, 142, 123, 0.1) !important;
+    color: var(--sage-green) !important;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.6em 1.2em;
+    border-radius: 50rem;
 }
 
-/* Styling for the Tip text to make it stand out */
+/* 4. The Tip Box (Nature Tips) */
 #insights .tip-text {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-    padding: 15px;
-    border-radius: 15px;
-    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    padding: 1.2rem;
+    border-radius: 18px;
+    border-left: 4px solid var(--sage-green);
+    margin-top: auto; /* Pushes the tip to the bottom of the card */
+}
+
+/* 5. Typography within Cards */
+#insights h3 {
+    color: var(--deep-forest); /* Softer than black */
+    margin-bottom: 1rem;
+}
+
+#insights .card-text {
+    color: var(--warm-gray);
+    line-height: 1.6;
 }
