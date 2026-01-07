@@ -174,3 +174,18 @@ h3 {
     color: var(--warm-gray);
     line-height: 1.6;
 }
+
+/* Button Styling within Insights Section */
+body #insights .text-center a.btn-outline-success {
+    padding-top: 15px; /* Top spacing */
+    padding-bottom: 15px; /* Bottom spacing */
+    padding-left: 50px; /* Left spacing (generous for a pill shape) */
+    padding-right: 50px; /* Right spacing */
+
+    /* Optional: Adding a bit of margin to separate it from the text above */
+    margin-top: 20px;
+}
+
+body #insights {
+    padding-bottom: 100px;
+}
