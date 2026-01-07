@@ -1,0 +1,42 @@
+body,
+html {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.parallax {
+    background-image: url("../images/hero.jpg");
+    height: 100vh;
+
+    /* Parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    height: 100vh;
+    padding: 4rem;
+    background: white;
+}
+
+/* Content box floating over hero */
+.content {
+    max-width: 800px;
+    margin: -150px auto 5rem; /* Pulls the box up over the parallax */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* Optional frosted glass effect */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        margin: -75px 1rem 3rem;
+        padding: 1.5rem;
+    }
+}
