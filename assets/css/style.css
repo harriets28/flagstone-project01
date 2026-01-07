@@ -52,9 +52,30 @@ h3 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .content {
-        margin: -75px 1rem 3rem;
-        padding: 1.5rem;
+    .parallax .content {
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 2.5rem 1.5rem;
+        margin: 0;
+    }
+}
+
+/* 2. Extra Small Screens (iPhone SE, older phones) */
+@media (max-width: 375px) {
+    .parallax .content {
+        top: 280px;
+        transform: translate(-50%, 0); /* Center horizontally only */
+        padding: 1.5rem 1rem;
+    }
+
+    .parallax .content h1 {
+        font-size: 1.75rem; /* Shrink the header so it doesn't take up the whole screen */
+    }
+
+    .parallax .content p {
+        font-size: 1rem;
     }
 }
 
