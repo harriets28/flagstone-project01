@@ -113,9 +113,46 @@ h3 {
     color: var(--sage-green);
 }
 
-/* Simple Hover: Just swap the colors */
+/* Hover effect for button */
 .btn-outline-success:hover {
     background-color: var(--sage-green);
     border-color: var(--sage-green);
     color: white;
+}
+
+/* --- Insights Section Styles --- */
+
+#insights {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Clean white background for readability */
+}
+
+/* Style the cards using Sage Green and Soft Stone */
+#insights .card {
+    background-color: var(--soft-stone);
+    border: none;
+    border-radius: 25px;
+    transition: box-shadow 0.3s ease; /* A simple shadow change on hover */
+}
+
+/* A subtle effect when the mouse touches the card */
+#insights .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Specific styling for the titles inside the cards */
+#insights h3 {
+    color: var(--sage-green);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Styling for the Tip text to make it stand out */
+#insights .tip-text {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    padding: 15px;
+    border-radius: 15px;
+    font-style: italic;
 }
