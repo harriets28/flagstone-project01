@@ -5,6 +5,10 @@
     --warm-gray: #707070;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Quicksand", sans-serif;
     background-color: var(--soft-stone); /* Soft off-white background */
@@ -62,23 +66,6 @@ h3 {
     }
 }
 
-/* 2. Extra Small Screens (iPhone SE, older phones) */
-@media (max-width: 375px) {
-    .parallax .content {
-        top: 280px;
-        transform: translate(-50%, 0); /* Center horizontally only */
-        padding: 1.5rem 1rem;
-    }
-
-    .parallax .content h1 {
-        font-size: 1.75rem; /* Shrink the header so it doesn't take up the whole screen */
-    }
-
-    .parallax .content p {
-        font-size: 1rem;
-    }
-}
-
 /* Breathwork Section */
 #breathwork {
     /* This forces the browser to scroll past the overlapping hero box */
@@ -87,7 +74,12 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Centers the circle and text horizontally */
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--soft-stone);
 }
+
 /* Breathing Circle Animation */
 .breathing-circle {
     width: 150px;
@@ -95,6 +87,7 @@ h3 {
     background: rgba(100, 142, 123, 0.2); /* Using your --sage-green */
     border: 2px solid var(--sage-green);
     border-radius: 50%;
+    margin: 3rem auto;
     animation: breathe 12s infinite ease-in-out;
 }
 
