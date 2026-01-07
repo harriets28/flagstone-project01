@@ -22,33 +22,32 @@ h3 {
     letter-spacing: 0.01em;
 }
 
+/* Parallax */
 .parallax {
     background-image: url("../images/hero.jpg");
     height: 100vh;
-
-    /* Parallax */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
+/* Content Section with Frosted Glass Effect */
 .content {
-    height: 100vh;
-    padding: 4rem;
-    background: white;
-}
-
-/* Content box floating over hero */
-.content {
-    max-width: 800px;
-    margin: -150px auto 5rem; /* Pulls the box up over the parallax */
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    backdrop-filter: blur(5px); /* Optional frosted glass effect */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 55%; /* Positions it slightly below the center of the image */
+    left: 50%;
+    transform: translate(-50%, -50%); /* This perfectly centers the box */
+    width: 90%;
+    max-width: 850px;
+    padding: 4rem 3rem;
+    background: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     text-align: center;
+    z-index: 5;
 }
 
 /* Responsive adjustments */
