@@ -99,28 +99,51 @@ h3 {
     }
 }
 
-/* Breathwork Section */
+/* --- BREATHWORK SECTION LAYOUT --- */
 #breathwork {
-    /* This forces the browser to scroll past the overlapping hero box */
-    scroll-margin-top: 0;
-    min-height: 100vh; /* Ensures the breathwork section fills the whole screen */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centers the circle and text horizontally */
+    align-items: center;
+    background-color: #f8f9fa; /* Soft Stone */
+    padding: 80px 0;
     text-align: center;
-    padding: 2rem;
-    background-color: var(--soft-stone);
 }
 
-/* Breathing Circle Animation */
+/* --- TYPOGRAPHY (Matching the Hero) --- */
+#breathwork .hero-title {
+    color: #2c3e50;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+#breathwork .hero-title span {
+    font-family: serif;
+    font-style: italic;
+}
+
+#breathwork .hero-subtitle {
+    color: #648e7b; /* Sage Green */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* --- THE BREATHING CIRCLE --- */
 .breathing-circle {
     width: 150px;
     height: 150px;
-    background: rgba(100, 142, 123, 0.2); /* Using --sage-green */
-    border: 2px solid var(--sage-green);
-    border-radius: 50%;
     margin: 3rem auto;
+    /* Soft gradient makes it look like air/mist */
+    background: radial-gradient(
+        circle,
+        rgba(100, 142, 123, 0.2) 0%,
+        rgba(100, 142, 123, 0.05) 100%
+    );
+    border: 1px solid rgba(100, 142, 123, 0.3);
+    border-radius: 50%;
     animation: breathe 12s infinite ease-in-out;
 }
 
@@ -128,11 +151,12 @@ h3 {
     0%,
     100% {
         transform: scale(1);
-        opacity: 0.5;
+        opacity: 0.4;
     }
     33% {
         transform: scale(1.5);
         opacity: 1;
+        box-shadow: 0 0 40px rgba(100, 142, 123, 0.15);
     } /* Inhale */
     66% {
         transform: scale(1.5);
@@ -140,16 +164,38 @@ h3 {
     } /* Hold */
 }
 
-/* Simple Sage Button */
-.btn-outline-success {
-    border-color: var(--sage-green);
-    color: var(--sage-green);
+/* --- THE RHYTHM GUIDE (Clean & Modern) --- */
+.rhythm-guide {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
 }
 
-/* Hover effect for button */
-.btn-outline-success:hover {
-    background-color: var(--sage-green);
-    border-color: var(--sage-green);
+.rhythm-guide span {
+    display: block;
+    color: #648e7b;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* --- THE BUTTON --- */
+.hero-btn.dark {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid rgba(100, 142, 123, 0.4);
+    color: #648e7b;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn.dark:hover {
+    background: #648e7b;
     color: white;
 }
 
