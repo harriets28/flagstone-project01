@@ -489,161 +489,111 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-/* --- SEED PACKET RESOURCES --- */
-#resources {
+.resources-wrapper {
     background-color: #ffffff;
-    padding: 100px 0;
+    min-height: 100vh; /* Fills the screen */
+    display: flex;
+    flex-direction: column;
     position: relative;
-    z-index: 10;
 }
 
+/* --- SECTION CONTAINER --- */
+.resources-section {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+}
+
+.resources-section .container {
+    min-height: 100vh; /* Ensures content stretches top to bottom */
+}
+
+/* --- TYPOGRAPHY & DIVIDERS --- */
+.section-title {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--deep-forest);
+}
+
+.section-title span {
+    font-style: italic;
+}
+
+.title-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--sage-green);
+    margin-top: 15px;
+    opacity: 0.5;
+}
+
+/* --- RESTORED SEED PACKETS --- */
 .seed-packet {
     background: var(--soft-stone);
-    border-radius: 4px 4px 25px 25px;
+    border: 1px solid rgba(100, 142, 123, 0.1);
+    border-radius: 4px 4px 30px 30px; /* Deep bottom curve */
     height: 100%;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(100, 142, 123, 0.1);
-    position: relative;
-    cursor: pointer; /* Tells user the whole card is interactive */
+    transition: all 0.4s ease;
+}
+
+.seed-packet:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 }
 
 .packet-header {
     background-color: var(--sage-green);
     color: white;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    padding: 12px;
     font-size: 0.7rem;
-    padding: 10px;
+    letter-spacing: 3px;
     font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px 4px 0 0;
 }
 
 .packet-body {
-    padding: 40px 20px 30px 20px;
+    padding: 35px 20px;
     text-align: center;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
 }
 
-/* The small icon in the center of the packet */
-.resource-glyph {
+.resource-icon {
     font-size: 1.8rem;
     color: var(--sage-green);
     margin-bottom: 20px;
-    opacity: 0.7;
+    display: block;
 }
 
 .seed-packet h5 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.3rem;
+    font-weight: 600;
     color: var(--deep-forest);
-    margin-bottom: 10px;
 }
 
-.seed-packet p {
-    font-size: 0.85rem;
-    color: var(--warm-gray);
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-/* The Button Link */
-.seed-btn {
-    margin-top: auto;
-    background-color: transparent;
+/* --- RESTORED RETURN LINK --- */
+.return-home {
     color: var(--sage-green);
-    border: 1px solid var(--sage-green);
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 2px;
-    padding: 12px 20px;
-    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
     transition: 0.3s;
 }
 
-/* Hover States */
-.seed-packet:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(100, 142, 123, 0.12);
-    background: white; /* Card lights up on hover */
-}
-
-.seed-packet:hover .seed-btn {
-    background-color: var(--sage-green);
-    color: white;
-    box-shadow: 0 4px 12px rgba(100, 142, 123, 0.2);
-}
-
-/* --- RESOURCES SECTION  --- */
-#resources {
-    background-color: #ffffff;
-    /* 1. Force the section to take up the full window height */
-    min-height: 100vh;
-
-    /* 2. Use Flexbox to center the content vertically */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 80px 0;
-    position: relative;
-    z-index: 10;
-}
-
-#resources h2 span {
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-}
-
-/* Container stability */
-#resources .container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Ensure the row of seed packets stays centered */
-#resources .row {
-    align-items: stretch;
-}
-
-.seed-packet {
-    background: var(--soft-stone);
-    border-radius: 4px 4px 25px 25px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(100, 142, 123, 0.1);
-    position: relative;
-}
-
-/* Return to Top Styling */
-.return-top-link {
-    display: inline-block;
-    color: var(--sage-green);
-    text-decoration: none;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.6;
-    transition: all 0.4s ease;
-    margin-top: 50px; /* Pushes it away from the cards */
-}
-
-.return-top-link:hover {
-    opacity: 1;
+.return-home:hover {
     color: var(--deep-forest);
 }
 
-.return-top-link i {
-    font-size: 1rem;
+.return-home i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
     animation: nudgeUp 2s infinite ease-in-out;
 }
 
