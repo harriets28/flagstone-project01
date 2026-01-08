@@ -458,6 +458,37 @@ h3 {
     }
 }
 
+/* --- SLIM AFFIRMATION BUTTON --- */
+.affirmation-btn {
+    display: inline-block;
+    /* Reduced vertical (10px) and horizontal (25px) padding */
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    /* Smaller font for a more delicate look */
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.affirmation-btn:hover {
+    background: white;
+    color: var(--deep-forest);
+    border-color: white;
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.affirmation-btn i {
+    font-size: 0.7rem; /* Shrinks the arrow icon to match text */
+    transition: transform 0.3s ease;
+}
+
 /* --- SEED PACKET RESOURCES --- */
 #resources {
     background-color: #ffffff;
