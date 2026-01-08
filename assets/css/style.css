@@ -200,7 +200,6 @@ h3 {
 }
 
 /**-- RECOGNISING ISSUES SECTION --**/
-/**-- RECOGNISING ISSUES SECTION --**/
 #section-support {
     background-color: #fcfcfc;
     min-height: 100vh;
@@ -286,76 +285,92 @@ h3 {
     margin-top: 25px !important;
 }
 
-/* --- Wellness Insights Section --- */
+/* --- NEW INSIGHTS CSS --- */
 
 #insights {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     background-color: #ffffff;
+    padding: 40px 0; /* Tightened top/bottom */
 }
 
-/* 1. The Card Container */
+/* 1. Header */
+#insights h2 {
+    color: var(--deep-forest);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* 2. THE STABILITY FIX: Reserve vertical space */
+#insights .carousel-inner {
+    min-height: 440px; /* Lock this to prevent jumping */
+}
+
+/* 3. Equal Height Cards */
+#insights .carousel-item .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #insights .card {
-    background-color: var(--soft-stone);
+    background: var(--soft-stone);
     border: none;
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    height: 100%; /* Important: Makes cards in a row equal height */
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    transition: transform 0.3s ease;
 }
 
-/* 2. Hover Effect: Makes the card 'lift' slightly */
 #insights .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* 3. The Custom Badge (Long-hand version) */
-.badge.bg-success.bg-opacity-10 {
-    background-color: rgba(100, 142, 123, 0.1) !important;
-    color: var(--sage-green) !important;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.6em 1.2em;
-    border-radius: 50rem;
+/* 4. Content inside cards */
+#insights .badge {
+    background: rgba(100, 142, 123, 0.1);
+    color: var(--sage-green);
+    width: fit-content;
+    margin: 0 auto 15px auto;
+    padding: 6px 12px;
 }
 
-/* 4. The Tip Box (Nature Tips) */
+#insights .card-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--deep-forest);
+}
+
 #insights .tip-text {
-    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
-    padding: 1.2rem;
-    border-radius: 18px;
-    border-left: 4px solid var(--sage-green);
-    margin-top: auto; /* Pushes the tip to the bottom of the card */
+    background: white;
+    padding: 12px;
+    border-top: 3px solid var(--sage-green);
+    border-radius: 10px;
+    margin-top: auto; /* Pushes Tip to the bottom of the card */
+    font-size: 0.85rem;
 }
 
-/* 5. Typography within Cards */
-#insights h3 {
-    color: var(--deep-forest); /* Softer than black */
-    margin-bottom: 1rem;
+/* 5. The Bottom Button */
+#insights .custom-explore-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    border: 1px solid var(--sage-green);
+    color: var(--sage-green);
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
 }
 
-#insights .card-text {
-    color: var(--warm-gray);
-    line-height: 1.6;
+#insights .custom-explore-btn:hover {
+    background: var(--sage-green);
+    color: white;
 }
 
-/* Button Styling within Insights Section */
-body #insights .text-center a.btn-outline-success {
-    padding-top: 15px; /* Top spacing */
-    padding-bottom: 15px; /* Bottom spacing */
-    padding-left: 50px; /* Left spacing (generous for a pill shape) */
-    padding-right: 50px; /* Right spacing */
-
-    /* Optional: Adding a bit of margin to separate it from the text above */
-    margin-top: 20px;
-}
-
-body #insights {
-    padding-bottom: 100px;
-}
-
+/* --- AFFIRMATION PARALLAX SECTION --- */
 .affirmation-parallax {
     /* 1. FULL SCREEN HEIGHT */
     min-height: 100vh;
