@@ -101,123 +101,112 @@
 
             <div class="mt-5">
                 <p class="text-muted small mb-3">Feeling grounded?</p>
-                <a href="#support" class="hero-btn dark">Learn more</a>
+                <a href="#section-support" class="hero-btn dark">Learn more</a>
             </div>
 
         </div>
     </section>
 
-    <!-- Call to Action Button -->
-    <div class="text-center mt-5">
-        <p class="text-muted small mb-3">Feeling grounded?</p>
-        <a href="#support" class="btn btn-outline-success rounded-pill px-5 py-2 fw-bold">
-            Learn more <i class="bi bi-arrow-down ms-2"></i>
-        </a>
-    </div>
-    </div>
-    </section>
+
 
     <!-- Recognising issues -->
-    <section class="support-section">
-
-        <span id="support" class="scroll-anchor"></span>
-
+    <section id="section-support" class="support-section py-5">
         <div class="container">
-            <div class="support-header">
-                <h2>Understanding Your Mind</h2>
-                <p>Recognize the signs and find evidence-based ways to feel more grounded.</p>
+
+            <div class="support-header text-center mb-5">
+                <p class="hero-subtitle">Guidance</p>
+                <h2 class="hero-title">Understanding Your <span>Mind</span></h2>
+                <p class="hero-text mx-auto" style="max-width: 600px;">Recognize the signs and find evidence-based ways
+                    to feel more grounded.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
 
-                    <ul class="nav nav-pills support-nav" id="supportTabs" role="tablist">
-                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill"
-                                data-bs-target="#pane-stress" type="button">The Overwhelmed Mind</button></li>
-                        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
-                                data-bs-target="#pane-anxiety" type="button">The Racing Heart</button></li>
-                        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
-                                data-bs-target="#pane-burnout" type="button">The Exhausted Body</button></li>
-                        <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-mood"
-                                type="button">The Heavy Feeling</button></li>
+                    <ul class="nav nav-pills support-nav mb-4" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-stress-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-stress" type="button" role="tab">The Overwhelmed Mind</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-anxiety-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-anxiety" type="button" role="tab">The Racing Heart</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-burnout-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-burnout" type="button" role="tab">The Exhausted Body</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-mood-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-mood" type="button" role="tab">The Heavy Feeling</button>
+                        </li>
                     </ul>
 
-                    <div class="tab-content support-card" id="supportTabsContent">
+                    <div class="tab-content support-card" id="pills-tabContent">
 
-                        <div class="tab-pane fade show active" id="pane-stress" role="tabpanel">
+                        <div class="tab-pane fade show active" id="pills-stress" role="tabpanel">
                             <div class="content-wrapper">
                                 <h4>Recognizing Stress</h4>
                                 <p>Stress is your brain's "Survival Mode" staying on high alert. You might notice
-                                    physical tension like a <strong>clenched jaw</strong>, feeling "wired but tired," or
-                                    difficulty focusing.</p>
-
+                                    physical tension like a <strong>clenched jaw</strong> or difficulty focusing.</p>
                                 <div class="action-box">
-                                    <h5>Your First Step: The 5-4-3-2-1 Tool</h5>
+                                    <h5>First Step: The 5-4-3-2-1 Tool</h5>
                                     <p>Identify 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you
-                                        taste. This reboots your senses.</p>
+                                        taste.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="pane-anxiety" role="tabpanel">
+
+                        <div class="tab-pane fade" id="pills-anxiety" role="tabpanel">
                             <div class="content-wrapper">
                                 <h4>Recognizing Anxiety</h4>
                                 <p>Anxiety is often a "Future-Focused" fear. You might feel a <strong>racing
-                                        heart</strong>, shallow breathing, and "What If?" loops where your mind jumps to
-                                    the worst-case scenario even when you are physically safe.</p>
-
+                                        heart</strong> and "What If?" loops.</p>
                                 <div class="action-box">
-                                    <h5>Your First Step: Box Breathing</h5>
-                                    <p>Inhale for 4 seconds, hold for 4, exhale for 4, and hold for 4. This physical
-                                        rhythm signals your nervous system to slow down and tells your brain you are not
-                                        in immediate danger.</p>
+                                    <h5>First Step: Box Breathing</h5>
+                                    <p>Inhale 4s, hold 4s, exhale 4s, hold 4s. This signals your nervous system to slow
+                                        down.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="pane-burnout" role="tabpanel">
+                        <div class="tab-pane fade" id="pills-burnout" role="tabpanel">
                             <div class="content-wrapper">
                                 <h4>Recognizing Burnout</h4>
-                                <p>Burnout happens when your emotional tank is completely empty. You might feel
-                                    <strong>emotionally numb</strong>, cynical about things you once loved, or exhausted
-                                    even after a full night's sleep.
-                                </p>
-
+                                <p>Burnout happens when your tank is empty. You might feel <strong>emotionally
+                                        numb</strong> or cynical.</p>
                                 <div class="action-box">
-                                    <h5>Your First Step: Radical Sensory Rest</h5>
-                                    <p>Spend 15 minutes away from all screens, noise, and people. Sensory rest allows
-                                        your overstimulated brain to process "nothing," which is the only way to begin
-                                        resetting your energy levels.</p>
+                                    <h5>First Step: Radical Sensory Rest</h5>
+                                    <p>Spend 15 minutes away from all screens and noise to allow your brain to reset.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="pane-mood" role="tabpanel">
+                        <div class="tab-pane fade" id="pills-mood" role="tabpanel">
                             <div class="content-wrapper">
                                 <h4>Recognizing Low Mood</h4>
-                                <p>Low mood often feels like a <strong>physical heaviness</strong>. You might notice a
-                                    lack of motivation, social withdrawal, or a "dark lens" over your thoughts that
-                                    makes even simple tasks feel like a struggle.</p>
-
+                                <p>Low mood often feels like a <strong>physical heaviness</strong>. You might notice
+                                    social withdrawal or a lack of motivation.</p>
                                 <div class="action-box">
-                                    <h5>Your First Step: Micro-Momentum</h5>
-                                    <p>Choose one "5-minute task" that has nothing to do with work—like watering a plant
-                                        or making a cup of tea. Accomplishing one tiny, physical goal helps reset your
-                                        brain's dopamine flow.</p>
+                                    <h5>First Step: Micro-Momentum</h5>
+                                    <p>Choose one "5-minute task" (like making tea) to help reset your brain's dopamine
+                                        flow.</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5 pt-3">
+
+            <div class="text-center mt-5">
                 <p class="text-muted small mb-3">Ready for more insights?</p>
-                <a href="#insights" class="btn btn-outline-success rounded-pill px-5 py-2 fw-bold custom-explore-btn">
-                    Continue your journey <i class="bi bi-cloud-sun ms-2"></i>
-                </a>
+                <a href="#insights" class="hero-btn dark">Continue your journey</a>
             </div>
+
         </div>
     </section>
-
 
 
     <!-- Wellness Insights Section -->
@@ -316,12 +305,12 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <button class="btn btn-outline-success rounded-circle p-2 mx-1" type="button"
-                        data-bs-target="#insightsCarousel" data-bs-slide="prev" aria-label="Previous">
+                    <button class="btn rounded-circle p-2 mx-1" type="button" data-bs-target="#insightsCarousel"
+                        data-bs-slide="prev" aria-label="Previous">
                         <i class="bi bi-chevron-left"></i>
                     </button>
-                    <button class="btn btn-outline-success rounded-circle p-2 mx-1" type="button"
-                        data-bs-target="#insightsCarousel" data-bs-slide="next" aria-label="Next">
+                    <button class="btn rounded-circle p-2 mx-1" type="button" data-bs-target="#insightsCarousel"
+                        data-bs-slide="next" aria-label="Next">
                         <i class="bi bi-chevron-right"></i>
                     </button>
                 </div>
@@ -330,8 +319,7 @@
             <!-- Call to action button -->
             <div class="text-center mt-5 pt-3">
                 <p class="text-muted small mb-3">Everything has its timing.</p>
-                <a href="#affirmations"
-                    class="btn btn-outline-success rounded-pill px-5 py-2 fw-bold custom-explore-btn">
+                <a href="#affirmations" class="btn rounded-pill px-5 py-2 fw-bold custom-explore-btn">
                     A daily reminder <i class="bi bi-cloud-sun ms-2"></i>
                 </a>
             </div>
