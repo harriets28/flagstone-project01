@@ -200,57 +200,90 @@ h3 {
 }
 
 /**-- RECOGNISING ISSUES SECTION --**/
-/* Scope everything to this section only */
+/**-- RECOGNISING ISSUES SECTION --**/
 #section-support {
     background-color: #fcfcfc;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding: 40px 0;
 }
 
+/* Header tightening */
+#section-support .support-header {
+    margin-bottom: 25px !important;
+}
+
+/* Tab Navigation */
 #section-support .support-nav {
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+    margin-bottom: 20px !important;
 }
 
 #section-support .nav-link {
     color: #648e7b;
-    border: 1px solid rgba(100, 142, 123, 0.3);
+    border: 1px solid rgba(100, 142, 123, 0.2);
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 6px 16px;
     background: white;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
+    font-size: 0.8rem;
 }
 
-#section-support .nav-link.active {
-    background-color: #648e7b !important;
-    color: white !important;
-    box-shadow: 0 8px 15px rgba(100, 142, 123, 0.2);
-}
-
+/* Centered Card Content */
 #section-support .support-card {
     background: white;
-    padding: 50px;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     border: 1px solid #f0f0f0;
+
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers everything */
+    text-align: center; /* Horizontally centers all text */
 }
 
 #section-support h4 {
     font-family: serif;
     font-style: italic;
     color: #2c3e50;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
+#section-support .content-wrapper p {
+    max-width: 600px; /* Prevents lines from being too wide to read */
+    margin: 0 auto 15px auto; /* Centers the paragraph block */
+}
+
+/* Centered Action Box */
 #section-support .action-box {
     background-color: #f8faf9;
-    border-left: 3px solid #648e7b;
-    padding: 25px;
-    border-radius: 0 15px 15px 0;
-    margin-top: 30px;
+    border-top: 3px solid #648e7b; /* Changed from left to top for center look */
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto 0 auto;
+    max-width: 500px; /* Keeps the box neat */
+}
+
+#section-support .action-box h5 {
+    color: #648e7b;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+#section-support .action-box p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Final Button */
+#section-support .mt-5 {
+    margin-top: 25px !important;
 }
 
 /* --- Wellness Insights Section --- */
