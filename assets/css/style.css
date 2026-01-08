@@ -457,3 +457,171 @@ h3 {
         background-attachment: scroll;
     }
 }
+
+/* --- SEED PACKET RESOURCES --- */
+#resources {
+    background-color: #ffffff;
+    padding: 100px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.seed-packet {
+    background: var(--soft-stone);
+    border-radius: 4px 4px 25px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 142, 123, 0.1);
+    position: relative;
+    cursor: pointer; /* Tells user the whole card is interactive */
+}
+
+.packet-header {
+    background-color: var(--sage-green);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.packet-body {
+    padding: 40px 20px 30px 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The small icon in the center of the packet */
+.resource-glyph {
+    font-size: 1.8rem;
+    color: var(--sage-green);
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.seed-packet h5 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    color: var(--deep-forest);
+    margin-bottom: 10px;
+}
+
+.seed-packet p {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* The Button Link */
+.seed-btn {
+    margin-top: auto;
+    background-color: transparent;
+    color: var(--sage-green);
+    border: 1px solid var(--sage-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* Hover States */
+.seed-packet:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(100, 142, 123, 0.12);
+    background: white; /* Card lights up on hover */
+}
+
+.seed-packet:hover .seed-btn {
+    background-color: var(--sage-green);
+    color: white;
+    box-shadow: 0 4px 12px rgba(100, 142, 123, 0.2);
+}
+
+/* --- RESOURCES SECTION  --- */
+#resources {
+    background-color: #ffffff;
+    /* 1. Force the section to take up the full window height */
+    min-height: 100vh;
+
+    /* 2. Use Flexbox to center the content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 0;
+    position: relative;
+    z-index: 10;
+}
+
+#resources h2 span {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+}
+
+/* Container stability */
+#resources .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ensure the row of seed packets stays centered */
+#resources .row {
+    align-items: stretch;
+}
+
+.seed-packet {
+    background: var(--soft-stone);
+    border-radius: 4px 4px 25px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 142, 123, 0.1);
+    position: relative;
+}
+
+/* Return to Top Styling */
+.return-top-link {
+    display: inline-block;
+    color: var(--sage-green);
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    margin-top: 50px; /* Pushes it away from the cards */
+}
+
+.return-top-link:hover {
+    opacity: 1;
+    color: var(--deep-forest);
+}
+
+.return-top-link i {
+    font-size: 1rem;
+    animation: nudgeUp 2s infinite ease-in-out;
+}
+
+@keyframes nudgeUp {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
