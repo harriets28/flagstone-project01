@@ -277,3 +277,24 @@ body #insights .text-center a.btn-outline-success {
 body #insights {
     padding-bottom: 100px;
 }
+
+.affirmation-parallax {
+    /* 1. Force it to be tall (70% of the screen height) */
+    min-height: 70vh;
+    width: 100%;
+
+    /* 2. The Background Image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../images/forest.jpg");
+
+    /* 3. The "Full Fill" settings */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* This forces the image to stretch and fill the area */
+
+    /* 4. Keeps content centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
