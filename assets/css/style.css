@@ -279,22 +279,32 @@ body #insights {
 }
 
 .affirmation-parallax {
-    /* 1. Force it to be tall (70% of the screen height) */
-    min-height: 70vh;
-    width: 100%;
+    /* 1. FULL SCREEN HEIGHT */
+    min-height: 100vh;
+    min-width: 100vh;
 
-    /* 2. The Background Image */
+    /* 2. Adjust this to hide the section above */
+    scroll-margin-top: 0px;
+
+    /* 3. Parallax Settings */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("../images/forest.jpg");
-
-    /* 3. The "Full Fill" settings */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* This forces the image to stretch and fill the area */
+    background-size: cover;
 
-    /* 4. Keeps content centered */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* 4. FORCE Centering */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center; /* Vertical Center */
+    align-items: center; /* Horizontal Center */
+    margin: 0;
+}
+
+/* This turns off parallax on phones where it often breaks */
+@media (max-width: 768px) {
+    .affirmation-parallax {
+        background-attachment: scroll;
+    }
 }
