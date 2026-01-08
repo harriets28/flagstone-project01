@@ -27,31 +27,59 @@ h3 {
 }
 
 /* Parallax */
-.parallax {
-    background-image: url("../images/hero.jpg");
+/* 1. This matches <section id="hero" class="hero-section"> */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+        url("../images/hero.jpg") center/cover no-repeat fixed;
     height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Makes all text white */
 }
 
-/* Content Section with Frosted Glass Effect */
-.content {
-    position: absolute;
-    top: 55%; /* Positions it slightly below the center of the image */
-    left: 50%;
-    transform: translate(-50%, -50%); /* This perfectly centers the box */
-    width: 90%;
-    max-width: 850px;
-    padding: 4rem 3rem;
-    background: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
-    backdrop-filter: blur(15px); /* Frosted glass effect */
-    border-radius: 40px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 5;
+/* 2. Style for the "Step into the Forest" subtitle */
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* 3. Style for "Rooted in Wellness" */
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    font-style: italic;
+}
+
+/* 4. Style for the paragraph */
+.hero-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* 5. Style for the Button */
+.hero-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: #1a1a1a;
 }
 
 /* Responsive adjustments */
