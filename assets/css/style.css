@@ -148,23 +148,38 @@ h3 {
 }
 
 @keyframes breathe {
-    0%,
+    /* 0% to 33% (4s): Inhale - Expand */
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    33.33% {
+        transform: scale(1.5);
+        opacity: 1;
+        box-shadow: 0 0 40px rgba(100, 142, 123, 0.15);
+    }
+
+    /* 33% to 66% (4s): Hold - Stay Large */
+    66.66% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    /* 66% to 90% (approx 3-4s): Exhale - Slow Shrink */
+    /* We move this to 90% so the shrink takes its time */
+    90% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    /* 90% to 100%: The Pause */
     100% {
         transform: scale(1);
         opacity: 0.4;
     }
-    33% {
-        transform: scale(1.5);
-        opacity: 1;
-        box-shadow: 0 0 40px rgba(100, 142, 123, 0.15);
-    } /* Inhale */
-    66% {
-        transform: scale(1.5);
-        opacity: 1;
-    } /* Hold */
 }
 
-/* --- THE RHYTHM GUIDE (Clean & Modern) --- */
+/* --- THE RHYTHM GUIDE --- */
 .rhythm-guide {
     max-width: 500px;
     margin: 0 auto;
