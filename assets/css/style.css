@@ -302,7 +302,30 @@ body #insights {
     margin: 0;
 }
 
-/* This turns off parallax on phones where it often breaks */
+/**-- Carousel Fade Effect --**/
+/* 1. The default state: The active text should be 100% visible */
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+    display: block;
+}
+
+/* 2. The Exit: When the text starts to leave, it fades out */
+.carousel-fade .carousel-item.active.carousel-item-start,
+.carousel-fade .carousel-item.active.carousel-item-end {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    z-index: 0;
+}
+
+/* 3. The Entrance: The new text waits, then fades in */
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+    transition: opacity 2s ease-in;
+    transition-delay: 0.8s; /* Gives the old text time to vanish */
+}
+
+/* This turns off parallax on phones */
 @media (max-width: 768px) {
     .affirmation-parallax {
         background-attachment: scroll;
