@@ -56,6 +56,8 @@ h3 {
 
 .hero-title span {
     font-style: italic;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 400; /* Serif fonts often look better a bit thicker than the thin main title */
 }
 
 /* 4. Style for the paragraph */
@@ -75,6 +77,9 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
 }
 
 .hero-btn:hover {
