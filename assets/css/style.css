@@ -536,26 +536,12 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.resources-wrapper {
-    background-color: #ffffff;
-    min-height: 100vh; /* Fills the screen */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-/* --- SECTION CONTAINER --- */
+/* --- SECTION WRAPPER --- */
 .resources-section {
     background-color: #ffffff;
-    min-height: 100vh;
-    display: flex;
 }
 
-.resources-section .container {
-    min-height: 100vh; /* Ensures content stretches top to bottom */
-}
-
-/* --- TYPOGRAPHY & DIVIDERS --- */
+/* --- TITLE --- */
 .section-title {
     font-family: "Cormorant Garamond", serif;
     color: var(--deep-forest);
@@ -569,58 +555,63 @@ h3 {
     width: 40px;
     height: 2px;
     background: var(--sage-green);
-    margin-top: 15px;
     opacity: 0.5;
 }
 
-/* --- RESTORED SEED PACKETS --- */
-.seed-packet {
+/* --- TOOL CARDS --- */
+.tool-card {
     background: var(--soft-stone);
-    border: 1px solid rgba(100, 142, 123, 0.1);
-    border-radius: 4px 4px 30px 30px; /* Deep bottom curve */
+    border-radius: 20px;
+    padding: 35px 20px;
+    text-align: center;
     height: 100%;
     display: flex;
     flex-direction: column;
-    transition: all 0.4s ease;
+    transition: 0.3s ease;
+    border: 1px solid rgba(100, 142, 123, 0.15);
 }
 
-.seed-packet:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+.tool-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
 }
 
-.packet-header {
-    background-color: var(--sage-green);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 4px 4px 0 0;
-}
-
-.packet-body {
-    padding: 35px 20px;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.resource-icon {
-    font-size: 1.8rem;
+/* --- ICONS --- */
+.tool-icon i {
+    font-size: 2rem;
     color: var(--sage-green);
     margin-bottom: 20px;
-    display: block;
 }
 
-.seed-packet h5 {
+/* --- HEADINGS --- */
+.tool-card h5 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 600;
     color: var(--deep-forest);
+    margin-bottom: 10px;
 }
 
-/* --- RESTORED RETURN LINK --- */
+/* --- BUTTONS --- */
+.tool-btn {
+    margin-top: auto;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    border: 1px solid var(--sage-green);
+    color: var(--sage-green);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.tool-btn:hover {
+    background: var(--sage-green);
+    color: white;
+}
+
+/* --- RETURN LINK --- */
 .return-home {
     color: var(--sage-green);
     text-decoration: none;
@@ -650,6 +641,6 @@ h3 {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
     }
 }
