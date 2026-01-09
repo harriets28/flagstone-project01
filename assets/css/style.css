@@ -413,6 +413,24 @@ h3 {
     }
 }
 
+/* DESKTOP/TABLET DEFAULT */
+#insightsCarousel-desktop {
+    display: block;
+}
+#insights-mobile-list {
+    display: none;
+}
+
+/* MOBILE OVERRIDE */
+@media (max-width: 576px) {
+    #insightsCarousel-desktop {
+        display: none !important;
+    }
+    #insights-mobile-list {
+        display: block !important;
+    }
+}
+
 /* --- AFFIRMATION PARALLAX SECTION --- */
 .affirmation-parallax {
     /* 1. FULL SCREEN HEIGHT */
