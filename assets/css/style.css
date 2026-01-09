@@ -213,96 +213,155 @@ h3 {
     background: #648e7b;
     color: white;
 }
-
 /**-- RECOGNISING ISSUES SECTION --**/
 #section-support {
-    background-color: #fcfcfc;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
+    background-color: var(
+        --soft-stone,
+        #f9f9f7
+    ); /* Matches your toolkit cards */
+    padding: 100px 0;
 }
 
-/* Header */
-#section-support .support-header {
-    margin-bottom: 25px !important;
-}
-
-/* Tab Navigation */
+/* Tab Navigation Styling */
 #section-support .support-nav {
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 20px !important;
+    gap: 12px;
+    border: none;
 }
 
 #section-support .nav-link {
-    color: #648e7b;
+    color: var(--sage-green, #648e7b);
     border: 1px solid rgba(100, 142, 123, 0.2);
     border-radius: 50px;
-    padding: 6px 16px;
+    padding: 10px 24px;
     background: white;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Centered Card Content */
-#section-support .support-card {
-    background: white;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
-    border: 1px solid #f0f0f0;
-
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically centers everything */
-    text-align: center; /* Horizontally centers all text */
-}
-
-#section-support h4 {
-    font-family: serif;
-    font-style: italic;
-    color: #2c3e50;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-#section-support .content-wrapper p {
-    max-width: 600px; /* Prevents lines from being too wide to read */
-    margin: 0 auto 15px auto; /* Centers the paragraph block */
-}
-
-/* Centered Action Box */
-#section-support .action-box {
-    background-color: #f8faf9;
-    border-top: 3px solid #648e7b; /* Changed from left to top for center look */
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px auto 0 auto;
-    max-width: 500px; /* Keeps the box neat */
-}
-
-#section-support .action-box h5 {
-    color: #648e7b;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-}
-
-#section-support .action-box p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
-}
-
-/* Final Button */
-#section-support .mt-5 {
-    margin-top: 25px !important;
+#section-support .nav-link:hover {
+    border-color: var(--sage-green);
+    background: rgba(100, 142, 123, 0.05);
 }
 
 #section-support .nav-link.active {
-    background: #648e7b;
+    background: var(--sage-green, #648e7b);
     color: white;
+    box-shadow: 0 8px 20px rgba(100, 142, 123, 0.2);
+}
+
+/* The Content Card */
+#section-support .support-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(100, 142, 123, 0.1);
+    min-height: 400px;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+}
+
+/* Typography & Content */
+#section-support h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    color: var(--deep-forest, #2c3e50);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#section-support .support-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+#section-support .support-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Nature-style bullet points */
+#section-support .support-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -2px;
+}
+
+#section-support .content-wrapper strong {
+    color: var(--deep-forest);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Smooth Fade Transition for Tabs */
+.tab-pane.fade {
+    transition: opacity 0.6s ease-in-out;
+}
+.why-insight {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+#section-support {
+    height: 100vh; /* Force height */
+    display: flex; /* Flexbox magic */
+    flex-direction: column;
+    padding: 40px 0; /* Tighten padding */
+    box-sizing: border-box;
+    overflow: hidden; /* No accidental scrollbars */
+}
+
+#section-support .container {
+    flex: 1; /* Container fills the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads content from top to bottom */
+}
+
+/* Tighten the card to ensure it doesn't push the CTA off */
+#section-support .support-card {
+    padding: 30px 50px; /* Slightly less vertical padding */
+    min-height: 0; /* Remove the 400px minimum */
+    flex: 1; /* Let the card grow/shrink to fit */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust margins on the header and tabs to save vertical space */
+#section-support .support-header {
+    margin-bottom: 20px !important;
+}
+
+#section-support .support-nav {
+    margin-bottom: 20px !important;
+}
+
+/* Ensure the CTA stays at the very bottom */
+#section-support .mt-5 {
+    margin-top: auto !important;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    #section-support {
+        height: 100vh;
+    }
 }
 
 /* --- INSIGHTS --- */
