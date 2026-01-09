@@ -538,7 +538,11 @@ h3 {
 
 /* --- SECTION WRAPPER --- */
 .resources-section {
+    min-height: 100vh; /* Makes it at least full screen */
+    position: relative; /* Ensures it sits above the parallax */
+    z-index: 1;
     background-color: #ffffff;
+    padding: 120px 0;
 }
 
 /* --- TITLE --- */
