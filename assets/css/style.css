@@ -407,7 +407,6 @@ h3 {
 .affirmation-parallax {
     /* 1. FULL SCREEN HEIGHT */
     min-height: 100vh;
-    min-width: 100vh;
 
     /* 2. Adjust this to hide the section above */
     scroll-margin-top: 0px;
@@ -455,6 +454,26 @@ h3 {
 @media (max-width: 768px) {
     .affirmation-parallax {
         background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    #affirmations .col-md-7 {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .affirmation-parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 576px) {
+    #affirmationCarousel h3 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        padding: 0 10px;
     }
 }
 
