@@ -313,7 +313,9 @@ h3 {
     position: relative;
     z-index: 5; /* Forces the white background to sit ON TOP of the parallax image */
     min-height: 100vh;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #insights h2 {
