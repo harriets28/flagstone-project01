@@ -305,16 +305,17 @@ h3 {
     color: white;
 }
 
-/* --- NEW INSIGHTS CSS --- */
+/* --- INSIGHTS --- */
 
 #insights {
     background-color: #ffffff;
-    padding: 60px 0 100px 0; /* Extra bottom padding acts as a shield */
+    padding: 60px 0 140px 0; /* Extra bottom padding acts as a shield */
     position: relative;
     z-index: 5; /* Forces the white background to sit ON TOP of the parallax image */
+    min-height: 100vh;
+}
 }
 
-/* 1. Header */
 #insights h2 {
     color: var(--deep-forest);
     font-family: "Cormorant Garamond", serif;
@@ -322,19 +323,14 @@ h3 {
     font-weight: 600;
 }
 
-/* 2. THE STABILITY FIX: Reserve vertical space 
-   Increased to 500px to ensure the button is pushed down and covers the 'leak' */
 #insights .carousel-inner {
     min-height: 500px;
-    display: flex;
-    align-items: center;
 }
 
 /* 3. Equal Height Cards & Page 2 Fix */
 #insights .carousel-item .row {
     display: flex;
     align-items: stretch; /* Forces all cards in the row to be same height */
-    width: 100%;
 }
 
 #insights .card {
@@ -406,6 +402,13 @@ h3 {
 #insights .custom-explore-btn:hover {
     background: var(--sage-green);
     color: white;
+}
+
+/* iPad Air & iPad Pro portrait */
+@media (min-width: 820px) and (max-width: 1024px) {
+    #insights {
+        padding-bottom: 220px;
+    }
 }
 
 /* --- AFFIRMATION PARALLAX SECTION --- */
