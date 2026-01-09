@@ -536,13 +536,13 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-/* --- SECTION WRAPPER --- */
+/* --- RESOURCES SECTION WRAPPER --- */
 .resources-section {
-    min-height: 100vh; /* Makes it at least full screen */
-    position: relative; /* Ensures it sits above the parallax */
+    min-height: 100vh; /* Ensures at least full screen */
+    position: relative;
     z-index: 1;
     background-color: #ffffff;
-    padding: 80px 0 40px;
+    padding: 80px 0 0; /* Top spacing */
 }
 
 /* --- TITLE --- */
@@ -649,32 +649,55 @@ h3 {
     }
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER (INSIDE RESOURCES SECTION) --- */
+/* Remove browser default spacing */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove bottom gap under footer */
+.resources-section {
+    padding-bottom: 0 !important;
+}
+
 .site-footer {
-    background: #ffffff;
+    margin-bottom: 0 !important;
+}
+
+/* Footer styling */
+.site-footer {
+    background: #f7faf8;
     border-top: 1px solid rgba(100, 142, 123, 0.15);
-    padding: 60px 0;
+    padding: 20px 0; /* reduced depth */
     text-align: center;
     color: var(--deep-forest);
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 12px;
 }
 
-/* Support Line */
+/* Tightened spacing */
 .footer-support {
-    font-size: 0.85rem;
-    color: #6c757d;
-    margin-bottom: 25px;
+    margin-bottom: 10px !important;
 }
 
-/* Navigation */
 .footer-nav {
-    margin-bottom: 25px;
+    margin-bottom: 6px !important;
 }
 
+.footer-copy {
+    margin-top: 6px !important;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Footer nav links */
 .footer-nav a {
-    margin: 0 12px;
+    margin: 0 10px;
     color: var(--sage-green);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.3s ease;
@@ -684,7 +707,7 @@ h3 {
     color: var(--deep-forest);
 }
 
-/* Social Icons */
+/* Social icons */
 .footer-social a {
     margin: 0 10px;
     color: var(--sage-green);
@@ -696,9 +719,14 @@ h3 {
     color: var(--deep-forest);
 }
 
-/* Copyright */
-.footer-copy {
-    margin-top: 25px;
-    font-size: 0.75rem;
-    color: #6c757d;
+/* Make Resources section fill the screen */
+.resources-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push footer to bottom of section */
+.site-footer {
+    margin-top: auto;
 }
