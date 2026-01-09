@@ -730,3 +730,10 @@ body {
 .site-footer {
     margin-top: auto;
 }
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* clean spacing between icons */
+}
