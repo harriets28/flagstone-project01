@@ -568,30 +568,23 @@ h3 {
     transition-delay: 0.8s; /* Gives the old text time to vanish */
 }
 
-/* This turns off parallax on phones */
-@media (max-width: 768px) {
+/* Media queries */
+/* 1. Only turn off parallax for actual phones or small touch devices */
+@media (max-width: 767px) {
     .affirmation-parallax {
         background-attachment: scroll;
+        min-height: 80vh; /* Better for small screens */
     }
 }
 
-@media (max-width: 768px) {
-    #affirmations .col-md-7 {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 1024px) {
+/* 2. For Tablets (768px to 1024px), let's keep the parallax but stabilize it */
+@media (min-width: 768px) and (max-width: 1024px) {
     .affirmation-parallax {
-        background-attachment: scroll;
-    }
-}
-
-@media (max-width: 576px) {
-    #affirmationCarousel h3 {
-        font-size: 1.25rem;
-        line-height: 1.4;
-        padding: 0 10px;
+        /* If it's still not working, it's likely an iOS restriction. 
+           We use 'initial' to reset any previous 'scroll' commands. */
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-background-size: cover; /* Support for older Safari/iPad */
     }
 }
 
