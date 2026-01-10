@@ -364,6 +364,37 @@ h3 {
     }
 }
 
+/* --- MOBILE SPECIFIC FIXES (Phones) --- */
+@media (max-width: 767px) {
+    #section-support {
+        height: auto !important; /* Allow the section to grow with content */
+        min-height: 100vh; /* Still at least full screen */
+        overflow: visible !important; /* Bring back the scrollbar if needed */
+        padding: 40px 0; /* Standard padding */
+    }
+
+    #section-support .container {
+        display: block; /* Remove flex-stretch on mobile */
+    }
+
+    #section-support .support-card {
+        padding: 25px; /* Smaller padding for small screens */
+        min-height: auto; /* Let text define the height */
+        display: block; /* Stack content naturally */
+    }
+
+    /* Make tabs stack or scroll if they get too wide */
+    #section-support .support-nav {
+        flex-wrap: wrap; /* Allow pills to wrap to 2 rows */
+        gap: 8px;
+    }
+
+    #section-support .nav-link {
+        width: 100%; /* Make each pill full width for easy tapping */
+        text-align: center;
+    }
+}
+
 /* --- INSIGHTS --- */
 
 #insights {
