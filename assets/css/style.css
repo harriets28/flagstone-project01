@@ -569,19 +569,35 @@ h3 {
 }
 
 /* Media queries */
+
+/* This is the fix for larger screens */
+.affirmation-col {
+    min-height: 70vh; /* This pushes the button back to the bottom on desktop */
+    display: flex;
+    flex-direction: column;
+}
 /* 1. Only turn off parallax for actual phones or small touch devices */
 @media (max-width: 767px) {
     .affirmation-parallax {
         background-attachment: scroll;
-        min-height: 80vh; /* Better for small screens */
+        min-height: 100vh;
+    }
+    .affirmation-col {
+        display: flex;
+        flex-direction: column;
+        min-height: 85vh; /* This is the 'frame' for your text and button */
     }
 }
 
-/* 2. For Tablets (768px to 1024px), let's keep the parallax but stabilize it */
+@media (max-width: 767px) {
+    .affirmation-col {
+        min-height: 80vh; /* Adjust this number to move the button up or down on mobile */
+    }
+}
+
+/* 2. For Tablets (768px to 1024px), keep parallax but ensure proper scaling */
 @media (min-width: 768px) and (max-width: 1024px) {
     .affirmation-parallax {
-        /* If it's still not working, it's likely an iOS restriction. 
-           We use 'initial' to reset any previous 'scroll' commands. */
         background-attachment: fixed;
         background-size: cover;
         -webkit-background-size: cover; /* Support for older Safari/iPad */
@@ -619,7 +635,7 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-/* --- RESOURCES SECTION WRAPPER --- */
+/* --- RESOURCES SECTION --- */
 .resources-section {
     min-height: 100vh; /* Ensures at least full screen */
     position: relative;
