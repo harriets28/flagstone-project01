@@ -38,7 +38,7 @@ h3 {
     color: white; /* Makes all text white */
 }
 
-/* 2. Style for the "Step into the Forest" subtitle */
+/* 2. Style for the "Step into Nature" subtitle */
 .hero-subtitle {
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -96,6 +96,14 @@ h3 {
         width: 90%;
         padding: 2.5rem 1.5rem;
         margin: 0;
+    }
+}
+
+/* ---IPHONE FIX --- */
+@media (max-width: 1024px) {
+    .hero-section {
+        /* Disables 'fixed' only on mobile/tablet to stop the image from disappearing */
+        background-attachment: scroll !important;
     }
 }
 
