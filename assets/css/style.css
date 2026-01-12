@@ -29,9 +29,13 @@ h3 {
 /* Parallax */
 /* 1. This matches <section id="hero" class="hero-section"> */
 .hero-section {
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-        url("../images/hero.jpg") center/cover no-repeat fixed;
-    height: 100vh;
+        url("../images/hero.jpg") 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,10 +104,11 @@ h3 {
 }
 
 /* ---IPHONE FIX --- */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
     .hero-section {
         /* Disables 'fixed' only on mobile/tablet to stop the image from disappearing */
         background-attachment: scroll !important;
+        min-height: 100vh;
     }
 }
 
