@@ -177,16 +177,44 @@ https://harriets28.github.io/flagstone-project01/
 
 ---
 
-## Attribution
-This project uses:
+## References & Inspiration
 
-- Bootstrap 5.3 (MIT License)  
-- Bootstrap Icons (MIT License)  
-- Google Fonts (Open Font License)  
-- Images (replace with actual sources)  
+This project was shaped by a blend of open‑source tools, wellbeing practices, and nature‑inspired research. While all written content, affirmations, and interface language were created uniquely for *Rooted in Wellness*, the following resources informed the emotional grounding and conceptual direction of the site.
 
-**External code/tutorial acknowledgements:**  
-> “Breathing circle animation inspired by a concept from [source link]. Adapted and rewritten for this project.”
+### Tools & Libraries  
+- **Bootstrap 5.3**  
+- **Bootstrap Icons**  
+- **Google Fonts**  
+- **Freepik assets** 
+
+### External Code & Tutorials  
+- **Breathing circle animation concept**  
+  Inspired by an idea from Shannon Crabill  
+  https://www.shannoncrabill.com/posts/focused-breathing/  
+  Adapted with custom timing, styling, and animation behaviour for this project.
+
+### Wellbeing, Nature & Mental Health Research  
+These publicly available resources helped shape the tone, structure, and nature‑based wellbeing themes explored in the project:
+
+- **Mind UK – Nature and Mental Health**  
+  https://www.mind.org.uk/information-support/tips-for-everyday-living/nature-and-mental-health/
+
+- **Mental Health Foundation – How Nature Benefits Mental Health**  
+  https://www.mentalhealth.org.uk/our-work/research/nature-how-connecting-nature-benefits-our-mental-health
+
+- **American Psychological Association – Nurtured by Nature**  
+  https://www.apa.org/monitor/2020/04/nurtured-nature
+
+- **Kew Gardens – The Science Behind Nature & Mental Health**  
+  https://growwild.kew.org/blog/science-behind-nature-and-mental-health
+
+- **University of Exeter – Nature as a Self‑Help Tool for Mental Health**  
+  https://news.exeter.ac.uk/faculty-of-health-and-life-sciences/psychology/nature-could-be-an-effective-self-help-tool-for-improving-mental-health/
+
+- **National Trust – How Walking in Nature Can Support Wellbeing**  
+  https://www.nationaltrust.org.uk/discover/nature/how-walking-in-nature-can-help-wellbeing
+
+All affirmations, section copy, and UI language were written specifically for this project.
 
 ---
 
