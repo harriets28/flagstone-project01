@@ -216,17 +216,20 @@ h3 {
     color: white;
 }
 
-/**-- RECOGNISING ISSUES SECTION --**/
+/* ==========================================================================
+   UNDERSTANDING YOUR FEELINGS SECTION
+   Contains the layout for the Feelings Header, Tabbed Nav, and Support Cards
+   ========================================================================== */
 #section-support {
     background-color: var(--soft-stone, #f9f9f7);
-    /* The Fix: min-height instead of height, removed overflow:hidden */
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 30px 0; /* Vertical spacing for the whole section */
     box-sizing: border-box;
 }
 
+/* Centering container using Flexbox to align content vertically */
 #section-support .container {
     flex: 1;
     display: flex;
@@ -234,75 +237,88 @@ h3 {
     justify-content: center;
 }
 
-/* Tab Navigation Styling (Restored) */
+/* Main Section Header: Large title for desktop view */
+#section-support .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Navigation List: Houses the pill-shaped tab buttons */
 #section-support .support-nav {
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
     border: none;
 }
 
+/* Individual list items within the navigation */
 #section-support .nav-item {
     margin-bottom: 10px;
 }
 
+/* The actual clickable Tab buttons: Styled as pill buttons */
 #section-support .nav-link {
     color: var(--sage-green, #648e7b) !important; /* Force color if inherited */
     border: 1px solid rgba(100, 142, 123, 0.2) !important;
     border-radius: 50px;
-    padding: 10px 24px;
+    padding: 6px 16px;
     background: white !important;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* Hover state for tabs: Soft background change */
 #section-support .nav-link:hover {
     border-color: var(--sage-green, #648e7b) !important;
     background: rgba(100, 142, 123, 0.05) !important;
 }
 
+/* Active state: Highlights the currently selected tab */
 #section-support .nav-link.active {
     background: var(--sage-green, #648e7b) !important;
     color: white !important;
     box-shadow: 0 8px 20px rgba(100, 142, 123, 0.2);
 }
 
-/* The Content Card (Restored spacing) */
+/* The Main Content Card: Displays the info for the active tab */
 #section-support .support-card {
     background: white;
-    padding: 50px;
-    border-radius: 30px;
+    padding: 25px 35px;
+    border-radius: 20px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(100, 142, 123, 0.1);
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     align-items: center;
 }
 
-/* Typography & Content */
+/* Card Heading: Serif font for a sophisticated feel */
 #section-support h4 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 600;
     color: var(--deep-forest, #2c3e50);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
+/* List within the card: Removes default bullets for custom dots */
 #section-support .support-list {
     list-style: none;
     padding: 0;
     margin-bottom: 25px;
 }
 
+/* Individual list items: Uses relative positioning for the custom bullet */
 #section-support .support-list li {
     position: relative;
     padding-left: 25px;
     margin-bottom: 12px;
     color: #555;
     font-size: 0.95rem;
-    text-align: left; /* Ensures list items stay left-aligned */
+    text-align: left;
 }
 
+/* Custom Bullet points: Styled as a Sage Green dot */
 #section-support .support-list li::before {
     content: "•";
     position: absolute;
@@ -313,11 +329,12 @@ h3 {
     top: -2px;
 }
 
-/* Smooth Fade Transition for Tabs */
+/* Smooth Fade: Controls the speed of the tab transition */
 .tab-pane.fade {
     transition: opacity 0.6s ease-in-out;
 }
 
+/* Insight Section: The italicised text at the bottom of the card */
 .why-insight {
     font-style: italic;
     color: #777;
@@ -327,27 +344,56 @@ h3 {
     margin-top: 20px;
 }
 
-/* Bottom CTA adjustment */
+/* CTA Button: Styles the "Continue Journey" button */
+#section-support .hero-btn.dark {
+    padding: 8px 20px; /* Smaller top/bottom and left/right padding */
+    font-size: 0.85rem; /* Smaller text size */
+    min-width: auto; /* Ensures it doesn't stay wide if a min-width was set elsewhere */
+}
+
+/* Bottom spacing: Controls distance between card and the CTA button */
 #section-support .mt-5 {
     margin-top: 3rem !important;
 }
 
-/* --- MOBILE SPECIFIC FIXES --- */
+/* --- MOBILE SPECIFIC FIXES ---
+   Applies to screens smaller than 767px (Tablets and Phones)
+   ------------------------------------------------------------ */
 @media (max-width: 767px) {
     #section-support {
-        height: auto !important;
-        padding: 60px 0;
+        height: auto !important; /* Allow section to grow with content */
+        padding: 30px 0;
     }
 
+    /* Shrinks the massive 4rem header so it doesn't overwhelm the phone screen */
+    #section-support .hero-title,
+    #section-support .hero-title span {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        display: inline;
+    }
+
+    /* Centers and scales subtitle text for mobile */
+    #section-support .hero-text {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        max-width: 90%; /* Prevents text from hitting screen edges */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Stacks card content vertically and reduces padding */
     #section-support .support-card {
-        padding: 30px 20px;
+        padding: 20px;
         display: block;
         min-height: auto;
     }
 
+    /* Stack navigation buttons as full-width blocks for easy thumb-tapping */
     #section-support .nav-link {
         width: 100%;
         text-align: center;
+        margin-bottom: 5px;
     }
 }
 
