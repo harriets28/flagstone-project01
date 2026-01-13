@@ -88,6 +88,8 @@ h3 {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 200;
     margin-bottom: 1.5rem;
+    color: var(--sage-green);
+
 }
 
 /* Supporting subtitle with a softer tone */
