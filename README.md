@@ -75,7 +75,6 @@ Users benefit from:
 ---
 
 ## Features & Screenshots
-*(Replace the image paths with your actual screenshot filenames once added)*
 
 <details>
 <summary>1. Floating Navigation Bar</summary>
@@ -172,7 +171,7 @@ Users benefit from:
 4. Save and wait for deployment  
 
 **Your site will be available at:**  
-https://your-username.github.io/rooted-in-wellness/
+https://harriets28.github.io/flagstone-project01/
 
 ---
 
