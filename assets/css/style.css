@@ -89,7 +89,6 @@ h3 {
     font-weight: 200;
     margin-bottom: 1.5rem;
     color: var(--sage-green);
-
 }
 
 /* Supporting subtitle with a softer tone */
@@ -591,7 +590,7 @@ h3 {
    affirmation transitions with a soft fade effect.
    ============================================================ */
 
-   /* Full‑screen parallax container */
+/* Full‑screen parallax container */
 .affirmation-parallax {
     min-height: 100vh;
     scroll-margin-top: 0px;
@@ -601,13 +600,6 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* Force centering */
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center; /* Vertical Center */
-    align-items: center; /* Horizontal Center */
-    margin: 0;
 }
 
 /* ============================================================
@@ -646,9 +638,14 @@ h3 {
 
 /* Desktop/tablet column structure */
 .affirmation-col {
-    min-height: 70vh; /* This pushes the button back to the bottom on desktop */
+    min-height: 80vh; /* This pushes the button back to the bottom on desktop */
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+}
+
+#affirmationCarousel {
+    margin-top: 60px;
 }
 
 /* Mobile adjustments */
@@ -661,13 +658,6 @@ h3 {
         display: flex;
         flex-direction: column;
         min-height: 85vh; /* This is the 'frame' for your text and button */
-    }
-}
-
-/* Additional mobile fine‑tuning */
-@media (max-width: 767px) {
-    .affirmation-col {
-        min-height: 80vh; /* Adjust this number to move the button up or down on mobile */
     }
 }
 
@@ -689,11 +679,12 @@ h3 {
 .affirmation-btn {
     display: inline-block;
     padding: 10px 25px;
-    color: color: var(--soft-stone);
+    color: var(--soft-stone);
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50px;
-    
+    margin-bottom: 20px;
+
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -715,13 +706,14 @@ h3 {
     font-size: 0.7rem; /* Shrinks the arrow icon to match text */
     transition: transform 0.3s ease;
 }
+
 /* ============================================================
    RESOURCES SECTION
    A full‑height layout containing supportive tools, gentle
    cards, and a grounded footer at the base of the section.
    ============================================================ */
 
-   /* Main container for the resources area */
+/* Main container for the resources area */
 .resources-section {
     min-height: 100vh; /* Ensures at least full screen */
     position: relative;
@@ -849,7 +841,7 @@ h3 {
    A soft, shallow footer anchored to the bottom of the section.
    ============================================================ */
 
-   /* Reset browser spacing */
+/* Reset browser spacing */
 body {
     margin: 0;
     padding: 0;
