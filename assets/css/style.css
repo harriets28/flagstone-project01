@@ -1,43 +1,81 @@
+/* ============================================================
+   ROOT VARIABLES
+   A grounding palette of nature‑inspired tones that guide the
+   emotional atmosphere and visual identity of the entire site.
+   ============================================================ */
+
 :root {
-    --sage-green: #648e7b;
-    --deep-forest: #2d3e34;
-    --soft-stone: #f4f1ea;
-    --warm-gray: #707070;
+    /* Core greens used throughout the interface */
+    --sage-green: #648e7b; /* Soft, calming green */
+    --deep-forest: #2d3e34; /* Dark, grounding green */
+
+    /* Stone and neutral tones for gentle contrast */
+    --soft-stone: #f4f1ea; /* Warm, natural off‑white */
+    --warm-gray: #707070; /* Neutral supporting gray */
+
+    /* Transparent variants for layering and depth */
+    --white-transparent: rgba(255, 255, 255, 0.5);
+    --sage-transparent: rgba(100, 142, 123, 0.15);
+
+    /* Additional nature‑inspired variables */
+    --stone-light: #f8f9fa; /* Very light stone tone */
+    --forest-blue: #2c3e50; /* Deep blue‑green accent */
+    --gray-soft: #888888; /* Soft neutral gray */
+    --gray-deep: #555555; /* Stronger neutral gray */
+    --gray-cool: #6c757d; /* Cool, muted gray */
 }
 
+/* ============================================================
+   GLOBAL STYLES
+   Foundational rules that shape the overall rhythm, spacing,
+   and visual calm of the entire site.
+   ============================================================ */
+
+/* Smooth scrolling across the whole document */
 html {
     scroll-behavior: smooth;
 }
 
+/* Base body styling for a soft, comfortable reading experience */
 body {
     font-family: "Quicksand", sans-serif;
-    background-color: var(--soft-stone); /* Soft off-white background */
-    color: var(--deep-forest); /* Very dark green text (softer than black) */
+    background-color: var(--soft-stone);
+    color: var(--deep-forest);
     font-weight: 400;
     line-height: 1.7;
+    margin: 0; /* Removes default browser spacing */
+    padding: 0; /* Ensures a clean, edge-to-edge layout */
 }
 
+/* ============================================================
+   TYPOGRAPHY
+   Type rules that shape hierarchy, clarity, and emotional tone
+   across the entire site.
+   ============================================================ */
 h1,
 h2,
 h3 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 600;
-    color: var(--sage-green); /* Elegant green for titles */
+    color: var(--deep-forest);
     letter-spacing: 0.01em;
 }
 
-/* Parallax */
-/* 1. This matches <section id="hero" class="hero-section"> */
+/* ============================================================
+   HERO SECTION
+   The opening space of the site, designed to feel spacious,
+   welcoming, and gently grounding from the very first moment.
+   ============================================================ */
+
+/* Container for the full hero area, creating height and balance */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
         url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax for Desktop */
-
-    /* 2. Use min-height for iOS stability */
-    min-height: 100vh;
+    background-attachment: fixed; /* Creates the scrolling depth effect */
+    min-height: 100vh; /* Use min-height for iOS stability */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +83,14 @@ h3 {
     text-align: center;
 }
 
-/* 2. Style for the "Step into Nature" subtitle */
+/* Main hero title with a calm, confident presence */
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+/* Supporting subtitle with a softer tone */
 .hero-subtitle {
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -54,20 +99,14 @@ h3 {
     opacity: 0.8;
 }
 
-/* 3. Style for "Rooted in Wellness" */
-.hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 200;
-    margin-bottom: 1.5rem;
-}
-
+/* Serif highlight within the hero title for gentle emphasis */
 .hero-title span {
     font-style: italic;
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     font-weight: 400; /* Serif fonts often look better a bit thicker than the thin main title */
 }
 
-/* 4. Style for the paragraph */
+/* Supporting paragraph with a light, reflective tone */
 .hero-text {
     font-size: 1.1rem;
     font-weight: 300;
@@ -75,7 +114,7 @@ h3 {
     opacity: 0.9;
 }
 
-/* 5. Style for the Button */
+/* Call‑to‑action button styled to feel inviting and gentle */
 .hero-btn {
     display: inline-block;
     padding: 12px 35px;
@@ -101,19 +140,25 @@ h3 {
     }
 }
 
-/* --- BREATHWORK SECTION LAYOUT --- */
+/* ============================================================
+   BREATHWORK SECTION
+   A calm, grounding space designed to guide the user through
+   slow, intentional breathing with gentle visual cues.
+   ============================================================ */
+
+/* Overall container for the breathwork area */
 #breathwork {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #f8f9fa; /* Soft Stone */
+    background-color: var(--stone-light);
     padding: 80px 0;
     text-align: center;
 }
 
-/* --- TYPOGRAPHY (Matching the Hero) --- */
+/* Typography styled to echo the hero section */
 #breathwork .hero-title {
-    color: #2c3e50;
+    color: var(--forest-blue);
     font-size: clamp(2rem, 8vw, 3.5rem);
     font-weight: 200;
     margin-bottom: 1rem;
@@ -133,12 +178,17 @@ h3 {
     display: block;
 }
 
-/* --- THE BREATHING CIRCLE --- */
+/* ============================================================
+   BREATHING ANIMATION
+   A slow, expanding visual cue that mirrors the rhythm of
+   mindful breathing and encourages a steady, relaxed pace.
+   ============================================================ */
+
+/* Circular breathing animation with soft mist-like gradient */
 .breathing-circle {
     width: 150px;
     height: 150px;
     margin: 3rem auto;
-    /* Soft gradient makes it look like air/mist */
     background: radial-gradient(
         circle,
         rgba(100, 142, 123, 0.2) 0%,
@@ -149,6 +199,7 @@ h3 {
     animation: breathe 12s infinite ease-in-out;
 }
 
+/* Keyframes for a 4s inhale, 4s hold, 4s exhale/pause cycle */
 @keyframes breathe {
     /* 0% to 33% (4s): Inhale - Expand */
     0% {
@@ -161,27 +212,26 @@ h3 {
         box-shadow: 0 0 40px rgba(100, 142, 123, 0.15);
     }
 
-    /* 33% to 66% (4s): Hold - Stay Large */
+    /* Hold — remain expanded */
     66.66% {
         transform: scale(1.5);
         opacity: 1;
     }
 
-    /* 66% to 90% (approx 3-4s): Exhale - Slow Shrink */
-    /* We move this to 90% so the shrink takes its time */
+    /* Exhale — slow return */
     90% {
         transform: scale(1);
         opacity: 0.4;
     }
 
-    /* 90% to 100%: The Pause */
+    /* Pause */
     100% {
         transform: scale(1);
         opacity: 0.4;
     }
 }
 
-/* --- THE RHYTHM GUIDE --- */
+/* Small guide showing the inhale/hold/exhale pattern */
 .rhythm-guide {
     max-width: 500px;
     margin: 0 auto;
@@ -198,12 +248,12 @@ h3 {
     margin-bottom: 4px;
 }
 
-/* --- THE BUTTON --- */
+/* Button styled to match the breathwork palette */
 .hero-btn.dark {
     display: inline-block;
     padding: 12px 35px;
     border: 1px solid rgba(100, 142, 123, 0.4);
-    color: #648e7b;
+    color: var(--sage-green);
     border-radius: 50px;
     text-decoration: none;
     letter-spacing: 2px;
@@ -397,8 +447,13 @@ h3 {
     }
 }
 
-/* --- INSIGHTS --- */
+/* ============================================================
+   INSIGHTS SECTION
+   A structured carousel of reflective cards, designed to feel
+   light, spacious, and gently interactive.
+   ============================================================ */
 
+/* Main container with protective white background */
 #insights {
     background-color: #ffffff;
     padding: 60px 0 140px 0; /* Extra bottom padding acts as a shield */
@@ -410,6 +465,7 @@ h3 {
     justify-content: center;
 }
 
+/* Section heading with a soft, serif presence */
 #insights h2 {
     color: var(--deep-forest);
     font-family: "Cormorant Garamond", serif;
@@ -417,16 +473,18 @@ h3 {
     font-weight: 600;
 }
 
+/* Ensures the carousel maintains a stable height */
 #insights .carousel-inner {
     min-height: 500px;
 }
 
-/* 3. Equal Height Cards & Page 2 Fix */
+/* Equal-height card rows for consistent layout */
 #insights .carousel-item .row {
     display: flex;
     align-items: stretch; /* Forces all cards in the row to be same height */
 }
 
+/* Individual insight cards with gentle lift on hover */
 #insights .card {
     background: var(--soft-stone);
     border: none;
@@ -443,7 +501,7 @@ h3 {
     transform: translateY(-5px);
 }
 
-/* 4. Content inside cards */
+/* Badge label at the top of each card */
 #insights .badge {
     background: rgba(100, 142, 123, 0.1);
     color: var(--sage-green);
@@ -456,6 +514,7 @@ h3 {
     letter-spacing: 1px;
 }
 
+/* Card title with a soft, reflective serif tone */
 #insights .card-title {
     font-family: "Cormorant Garamond", serif;
     font-style: italic;
@@ -464,6 +523,7 @@ h3 {
     margin-bottom: 1rem;
 }
 
+/* Tip box anchored to the bottom of each card */
 #insights .tip-text {
     background: white;
     padding: 15px;
@@ -474,7 +534,7 @@ h3 {
     line-height: 1.5;
 }
 
-/* 5. The Bottom Button & Controls */
+/* Carousel controls and explore button */
 #insights .btn-outline-success {
     border-color: rgba(100, 142, 123, 0.3);
     color: var(--sage-green);
@@ -498,14 +558,14 @@ h3 {
     color: white;
 }
 
-/* iPad Air & iPad Pro portrait */
+/* iPad Air & iPad Pro portrait adjustments */
 @media (min-width: 820px) and (max-width: 1024px) {
     #insights {
         padding-bottom: 220px;
     }
 }
 
-/* DESKTOP/TABLET DEFAULT */
+/* Desktop/tablet default visibility */
 #insightsCarousel-desktop {
     display: block;
 }
@@ -513,7 +573,7 @@ h3 {
     display: none;
 }
 
-/* MOBILE OVERRIDE */
+/* Mobile override for stacked list layout */
 @media (max-width: 576px) {
     #insightsCarousel-desktop {
         display: none !important;
@@ -523,15 +583,16 @@ h3 {
     }
 }
 
-/* --- AFFIRMATION PARALLAX SECTION --- */
+/* ============================================================
+   AFFIRMATION PARALLAX SECTION
+   A full‑screen parallax space designed to hold slow, gentle
+   affirmation transitions with a soft fade effect.
+   ============================================================ */
+
+   /* Full‑screen parallax container */
 .affirmation-parallax {
-    /* 1. FULL SCREEN HEIGHT */
     min-height: 100vh;
-
-    /* 2. Adjust this to hide the section above */
     scroll-margin-top: 0px;
-
-    /* 3. Parallax Settings */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("../images/forest.jpg");
     background-attachment: fixed;
@@ -539,7 +600,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* 4. FORCE Centering */
+    /* Force centering */
     display: flex !important;
     flex-direction: column;
     justify-content: center; /* Vertical Center */
@@ -547,14 +608,19 @@ h3 {
     margin: 0;
 }
 
-/**-- Carousel Fade Effect --**/
-/* 1. The default state: The active text should be 100% visible */
+/* ============================================================
+   CAROUSEL FADE EFFECT
+   Smooth transitions between affirmation lines with a gentle,
+   delayed fade‑in and fade‑out rhythm.
+   ============================================================ */
+
+/* Default visible state */
 .carousel-fade .carousel-item.active {
     opacity: 1;
     display: block;
 }
 
-/* 2. The Exit: When the text starts to leave, it fades out */
+/* Fade‑out transition */
 .carousel-fade .carousel-item.active.carousel-item-start,
 .carousel-fade .carousel-item.active.carousel-item-end {
     opacity: 0;
@@ -562,7 +628,7 @@ h3 {
     z-index: 0;
 }
 
-/* 3. The Entrance: The new text waits, then fades in */
+/* Fade‑in transition */
 .carousel-fade .carousel-item-next.carousel-item-start,
 .carousel-fade .carousel-item-prev.carousel-item-end {
     opacity: 1;
@@ -570,15 +636,20 @@ h3 {
     transition-delay: 0.8s; /* Gives the old text time to vanish */
 }
 
-/* Media queries */
+/* ============================================================
+   LAYOUT SUPPORT
+   Ensures the affirmation text and button remain vertically
+   balanced across different screen sizes.
+   ============================================================ */
 
-/* This is the fix for larger screens */
+/* Desktop/tablet column structure */
 .affirmation-col {
     min-height: 70vh; /* This pushes the button back to the bottom on desktop */
     display: flex;
     flex-direction: column;
 }
-/* 1. Only turn off parallax for actual phones or small touch devices */
+
+/* Mobile adjustments */
 @media (max-width: 767px) {
     .affirmation-parallax {
         background-attachment: scroll;
@@ -591,13 +662,14 @@ h3 {
     }
 }
 
+/* Additional mobile fine‑tuning */
 @media (max-width: 767px) {
     .affirmation-col {
         min-height: 80vh; /* Adjust this number to move the button up or down on mobile */
     }
 }
 
-/* 2. For Tablets (768px to 1024px), keep parallax but ensure proper scaling */
+/* Tablet scaling adjustments */
 @media (min-width: 768px) and (max-width: 1024px) {
     .affirmation-parallax {
         background-attachment: fixed;
@@ -606,19 +678,24 @@ h3 {
     }
 }
 
-/* --- SLIM AFFIRMATION BUTTON --- */
+/* ============================================================
+   AFFIRMATION BUTTON
+   A slim, delicate button with a soft glass‑like finish and a
+   subtle lift on hover.
+   ============================================================ */
+
 .affirmation-btn {
     display: inline-block;
-    /* Reduced vertical (10px) and horizontal (25px) padding */
     padding: 10px 25px;
-    color: white;
+    color: color: var(--soft-stone);
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50px;
-    /* Smaller font for a more delicate look */
+    
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+
     transition: all 0.4s ease;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
@@ -636,8 +713,13 @@ h3 {
     font-size: 0.7rem; /* Shrinks the arrow icon to match text */
     transition: transform 0.3s ease;
 }
+/* ============================================================
+   RESOURCES SECTION
+   A full‑height layout containing supportive tools, gentle
+   cards, and a grounded footer at the base of the section.
+   ============================================================ */
 
-/* --- RESOURCES SECTION --- */
+   /* Main container for the resources area */
 .resources-section {
     min-height: 100vh; /* Ensures at least full screen */
     position: relative;
@@ -646,7 +728,10 @@ h3 {
     padding: 80px 0 0; /* Top spacing */
 }
 
-/* --- TITLE --- */
+/* ============================================================
+   SECTION TITLE
+   Serif heading with a soft divider for visual grounding.
+   ============================================================ */
 .section-title {
     font-family: "Cormorant Garamond", serif;
     color: var(--deep-forest);
@@ -663,7 +748,11 @@ h3 {
     opacity: 0.5;
 }
 
-/* --- TOOL CARDS --- */
+/* ============================================================
+   TOOL CARDS
+   Soft, elevated cards with gentle hover movement.
+   ============================================================ */
+
 .tool-card {
     background: var(--soft-stone);
     border-radius: 20px;
@@ -681,14 +770,14 @@ h3 {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* --- ICONS --- */
+/* Icons inside each tool card */
 .tool-icon i {
     font-size: 2rem;
     color: var(--sage-green);
     margin-bottom: 20px;
 }
 
-/* --- HEADINGS --- */
+/* Card headings */
 .tool-card h5 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 600;
@@ -696,7 +785,7 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* --- BUTTONS --- */
+/* Buttons inside tool cards */
 .tool-btn {
     margin-top: auto;
     display: inline-block;
@@ -716,7 +805,10 @@ h3 {
     color: white;
 }
 
-/* --- RETURN LINK --- */
+/* ============================================================
+   RETURN LINK
+   A small, centered link with a gentle upward nudge animation.
+   ============================================================ */
 .return-home {
     color: var(--sage-green);
     text-decoration: none;
@@ -750,8 +842,12 @@ h3 {
     }
 }
 
-/* --- FOOTER (INSIDE RESOURCES SECTION) --- */
-/* Remove browser default spacing */
+/* ============================================================
+   FOOTER (INSIDE RESOURCES SECTION)
+   A soft, shallow footer anchored to the bottom of the section.
+   ============================================================ */
+
+   /* Reset browser spacing */
 body {
     margin: 0;
     padding: 0;
@@ -778,7 +874,7 @@ body {
     border-radius: 12px;
 }
 
-/* Tightened spacing */
+/* Footer spacing refinements */
 .footer-support {
     margin-bottom: 10px !important;
 }
@@ -793,7 +889,7 @@ body {
     color: #6c757d;
 }
 
-/* Footer nav links */
+/* Footer navigation links */
 .footer-nav a {
     margin: 0 10px;
     color: var(--sage-green);
@@ -808,7 +904,7 @@ body {
     color: var(--deep-forest);
 }
 
-/* Social icons */
+/* Footer social icons */
 .footer-social a {
     margin: 0 10px;
     color: var(--sage-green);
@@ -820,18 +916,19 @@ body {
     color: var(--deep-forest);
 }
 
-/* Make Resources section fill the screen */
+/* Ensures the Resources section always fills the full screen */
 .resources-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Push footer to bottom of section */
+/* Pushes the footer to the bottom of the section layout */
 .site-footer {
     margin-top: auto;
 }
 
+/* Social icon row with balanced spacing */
 .footer-social {
     display: flex;
     justify-content: center;
