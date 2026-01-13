@@ -91,7 +91,7 @@ Users benefit from:
 <details>
 <summary>2. Parallax Hero Section</summary>
 
-![Parallax Hero Section](assets/screenshots/hero.png)
+![Parallax Hero Section](assets/screenshots/parallax-hero-image.png)
 
 - Full-screen hero with fixed background and gradient overlay  
 - Responsive title using `clamp()`  
@@ -102,7 +102,7 @@ Users benefit from:
 <details>
 <summary>3. Breathwork Animation</summary>
 
-![Breathwork Animation](assets/screenshots/breathwork.png)
+![Breathwork Animation](assets/screenshots/breathing-circle.png)
 
 - CSS keyframe animation guiding 4‑4‑4 breathing cycle  
 - Expanding/contracting circle animation  
@@ -113,7 +113,8 @@ Users benefit from:
 <details>
 <summary>4. Understanding Your Feelings — Tabbed Section</summary>
 
-![Tabbed Section](assets/screenshots/tabbed-section.png)
+![Tabbed Section](assets/screenshots/feelings-section.png) 
+
 
 - Built with Bootstrap nav‑pills and restyled with CSS  
 - Pill-shaped tabs  
@@ -125,7 +126,8 @@ Users benefit from:
 <details>
 <summary>5. Insights Carousel</summary>
 
-![Insights Carousel](assets/screenshots/insights-carousel.png)
+![Insights Carousel](assets/screenshots/insights-carousel1.png) 
+(assets/screenshots/insights-carousel2.png)
 
 - Bootstrap carousel on desktop, list on mobile  
 - Equal-height cards using flexbox  
